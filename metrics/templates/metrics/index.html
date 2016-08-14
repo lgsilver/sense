@@ -1,0 +1,33 @@
+{% load static %}
+
+<link href='https://fonts.googleapis.com/css?family=Raleway+Dots' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static "metrics/app.css" %}">
+
+<div id="chart">
+
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1>{{ latest.temperature }}°F</h1>
+        <h3>Temperature</h3>
+      </div>
+      <div class="col-sm-4">
+        <h1>{{ latest.humidity }}%</h1>
+        <h3>Humidity</h3>
+      </div>
+      <div class="col-sm-4">
+        <h1>{{ latest.pressure }}</h1>
+        <h3>Pressure</h3>
+      </div>
+    </div>
+</div>
+
+<script>
+  globalData = {% autoescape off %}{{ json }}{% endautoescape %};
+</script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{% static "metrics/app.js" %}"></script>

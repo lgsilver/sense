@@ -1,0 +1,27 @@
+body {
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5 {
+  color: white;
+  font-weight: 300;
+  color: #999;
+}
+
+h1 {
+  font-family: 'Raleway Dots', cursive;
+  font-size: 6em;
+  color: #003366;
+}
+
+#chart {
+  height: 500px;
+}
+
+/*#chart .main-svg {
+  background: #777 !important;
+  color: white;
+
+}*/
